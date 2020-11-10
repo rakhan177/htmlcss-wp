@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.clearfix{
+.clearfix:after{
   content: "";
   display: table;
   clear: both;
@@ -65,15 +65,26 @@ header > div{
   width: 100%;
   height: 70px;
   background-color: black;
+  border-radius: 0 0 20px 20px;
 }
 
 nav > ul{
   text-align: center;
   line-height: 70px;
 }
+
 nav > ul > li{
   display: inline-block;
   margin: 0 10px;
+}
+
+nav > ul > li:hover{
+  background-color: white;
+}
+
+nav > ul > li:hover > a{
+  color: black;
+  /* font-size: 25px; */
 }
 
 nav > ul > li > a{
@@ -89,8 +100,13 @@ nav > ul > li > a{
 
 main{
   width: 100%;
-  margin-top: 10px;
+  margin-top: 50px;
   position: relative;
+  font-family: 'Xanh Mono', monospace;
+}
+
+main > section{
+  border-radius: 10px;
 }
 
 /* prima colonna main */
@@ -122,6 +138,15 @@ main ul li a{
   font-weight: bold;
 }
 
+main > section:first-child:hover{
+  border: 2px solid red;
+  box-shadow: 10px 5px black;
+}
+
+main ul li a:hover{
+  color: blue;
+}
+
 /* / fine prima colonna main */
 
 /* seconda colonna main */
@@ -133,6 +158,11 @@ main > section:nth-child(2){
   padding: 30px;
 }
 
+main > section:nth-of-type(2):hover{
+  border: 2px solid red;
+  box-shadow: 10px 5px black;
+}
+
 /* /fine seconda colonna main */
 
 /* terza colonna main */
@@ -140,8 +170,13 @@ main > section:nth-child(2){
 main > section:last-child > div{
   padding: 30px;
   background-color: white;
-  height: 500px;
   margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+main > section:last-child > div:hover{
+  border: 2px solid red;
+  box-shadow: 10px 5px black;
 }
 
 /* /fine terza colonna main */
@@ -187,7 +222,9 @@ footer > div:last-of-type{
   height: 150px;
 }
 
-footer > .clearfix > .img{
+/* css condivisi tra elementi in bottom footer */
+
+footer > .clearfix > div{
   width: calc(100% / 3);
   height: 150px;
   position: relative;
@@ -200,5 +237,11 @@ footer > .clearfix > div > a > img{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+footer:hover{
+  box-shadow: 10px 5px black;
+}
+
+/* / css condivisi bottom footer */
 
 /* /fine footer */
