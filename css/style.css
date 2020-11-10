@@ -139,7 +139,6 @@ main ul li a{
 }
 
 main > section:first-child:hover{
-  border: 2px solid red;
   box-shadow: 10px 5px black;
 }
 
@@ -159,7 +158,6 @@ main > section:nth-child(2){
 }
 
 main > section:nth-of-type(2):hover{
-  border: 2px solid red;
   box-shadow: 10px 5px black;
 }
 
@@ -175,7 +173,6 @@ main > section:last-child > div{
 }
 
 main > section:last-child > div:hover{
-  border: 2px solid red;
   box-shadow: 10px 5px black;
 }
 
@@ -231,15 +228,15 @@ footer > .clearfix > div{
 }
 
 footer > .clearfix > div > a > img{
-  width: 280px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.3;
 }
 
-footer:hover{
-  box-shadow: 10px 5px black;
+footer > .clearfix > div > a > img:hover{
+  opacity: 1;
 }
 
 /* / css condivisi bottom footer */
